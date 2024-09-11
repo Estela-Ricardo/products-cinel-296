@@ -21,7 +21,7 @@ function Product(props) {
         >
             <h1 className='name'>{name}</h1>
             <h3 className='brand'>{brand}</h3>
-            <h3 className='warranty'>{warranty[0] + (warranty[0] == 1? " ano de garantia" : " anos de garantia")}</h3>
+            <h3 className='warranty'>{warranty[0] + (warranty[0] === 1? " ano de garantia" : " anos de garantia")}</h3>
 
             <div className='product-info'>
 
