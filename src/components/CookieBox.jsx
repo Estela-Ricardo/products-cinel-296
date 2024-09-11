@@ -12,6 +12,10 @@ import { useState } from 'react'
 
 function CookieBox() {
 
+    const estados = ['normal', 'lucky']
+
+    const [estadoAtual, setEstadoAtual] = useState(estados[0])
+
     const [cookies, setCookies] = useState(0)
     const [nuggets, setNuggets] = useState(0)
 
@@ -21,10 +25,28 @@ function CookieBox() {
             setNuggets(nuggets + 1)
         }
 
-        setCookies(cookies + 1)
+        if (Math.random() < 0.033) {
+            setCookies(0)
+            setNuggets(0)
+        }
+
+        if (Math.random() < 0.02) {
+            setEstadoAtual[estados[1]]
+            console.log("Lucky estado!!!!!!!")
+        }
+
+        if(estadoAtual === estados[1]){
+            setCookies(cookies + 2)
+            console.log("Ïncrementar 2!!!!")
+        }else{
+            setCookies(cookies + 1)
+            console.log("Ïncrementar 1")
+        }
+
+        console.log("Estado -> ", estadoAtual)
     }
 
-    let backgroundColor = cookies >= 50 ? "#fcba03" : "grey"
+    let backgroundColor = cookies >= 50 ? "#fcba03" : "gray"
 
     return (
         <button onClick={handleClick} style={{ backgroundColor }}>
