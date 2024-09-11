@@ -137,6 +137,15 @@ button:focus-visible {
   border-radius: 6px;
   padding: 2px 4px;
 }
+.product h3.warranty {
+  font-size: 0.75em;
+  text-align: left;
+  margin: 10px 15px 0 0 ;
+  border-radius: 6px;
+  padding: 3px 5px;
+  background-color: #9c9c9c;
+  color:#292929;
+}
 
 .product .product-info {
   width: 100%;

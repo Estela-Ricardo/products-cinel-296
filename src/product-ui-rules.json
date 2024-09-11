@@ -9,7 +9,8 @@
             "color": "white"
         },
         "Wearable": {
-            "backgroundColor": "#bbbbbb",
+           
+            "backgroundColor": "#aab9ba",
             "color": "black"
         }
     }
